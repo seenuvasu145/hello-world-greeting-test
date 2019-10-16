@@ -8,6 +8,6 @@ node {
       		archive 'target/*.war'
    	}	
 	stage('Static Code Analysis'){
-    		sh 'mvn clean verify sonar:sonar -Dsonar.projectName=kubernetes-project -Dsonar.projectKey=kubernetes-project -Dsonar.projectVersion=$BUILD_NUMBER';
+    		sh 'mvn clean verify sonar:sonar -Dsonar.projectName=Esafe-Project -Dsonar.projectKey=Esafe-Project -Dsonar.projectVersion=$BUILD_NUMBER';
 	}
 }
