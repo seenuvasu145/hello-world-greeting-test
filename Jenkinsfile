@@ -32,8 +32,8 @@ node {
 
 
        stage ('Start Tomcat'){
-    		sh 'cd /home/jenkins/tomcat/bin
-    		./startup.sh';
+    		sh label: '', script: '''cd /home/jenkins/tomcat/bin
+    		./startup.sh''';
 	}
 	stage ('Deploy '){
     		unstash 'binary'
