@@ -55,7 +55,7 @@ node {
              "files": [
               {
               "pattern": "kubernetes-project/$BUILD_NUMBER/*.war",
-              "target": "/opt/ansible/",
+              "target": "/opt/k8s-lab/",
               "props": "Performance-Tested=Yes;Integration-Tested=Yes",
               "flat": "true"
                }
@@ -63,4 +63,10 @@ node {
                }"""
                server.download(downloadSpec)
                }
+	stage('Build Docker image'){
+            
+		sh 'ansible-playbook /opt/k8s-lab/create-simple-devops-image.yml'
+
+          }
+
 }
