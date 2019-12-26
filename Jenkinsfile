@@ -86,7 +86,7 @@ node {
 
 
 
-         sh 'ansible-playbook -i /opt/k8s-lab/hosts /opt/k8s-lab/kubernetes-esafe-    deployment.yml'
+         sh 'ansible-playbook -i /opt/k8s-lab/hosts /opt/k8s-lab/kubernetes-esafe-deployment.yml'
 
          sh 'ansible-playbook -i /opt/k8s-lab/hosts /opt/k8s-lab/kubernetes-esafe-service.yml'
 
